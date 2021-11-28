@@ -43,91 +43,172 @@ print('''%%%%%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 @@@@@@@@@@*     %#     #@@@    @@@    /@@@&    @@    &@@&    @@(   .@@@,   *@@@    @&    &@/      *@    @@    (@@@    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&&&&&%%%
 @@@@@@@@@@@     @@     @@@@,     @@.     @&    @@&           @@(   .@@@,   /@@@@       .@@@(   *@@@@    @@@           @@*    @@    /@,    @@@@@@@@@&&&&&&&&&&&%%%
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&&&&&&&&&&&%%%\n''')
-
-def clearerror():
-    # Clear the error message
-    pg.click(950, 660, duration = 1)
-    time.sleep(6)
-
-def discard():
-    #Click on MTM taskbar || MTM must be at index 8
-    pg.click(2385, 1050, duration = 2)
-
-    #Click on Cancel
-    pg.click(3585, 560, duration = 2)
-
-def relogin():
-
-    # Click on connect wallet
-    pg.click(2870, 740, duration = 2)
-
-    # Click on Metamask
-    pg.click(2870, 580, duration = 2)
-
-    #Click on MTM taskbar || MTM must be at index 8
-    # pg.click(2385, 1050, duration = 2)
-
-    # Click on Sign
-    pg.moveTo(3750, 560, duration = 3)
-    pg.click()
-
-    # Click on Blank
-    pg.click(2900, 300, duration = 2)
-    time.sleep(10)
-
-    # Click on Teasure Hunt 
-    pg.click(2900, 460, duration = 2)
-    time.sleep(10)
-
-def prepare():
-    print("\nProcess Starting . . .")
-    print("Clear error message")
-    clearerror()
-    print("Discard old login")
-    discard()
-    print("Relogin Metamask")
-    relogin()
-
-
-def autoclick(loop):
-    # Back to menu
-    pg.click(2450, 280, duration = 2)
-    # Click on Hero
-    pg.moveTo(3300, 765, duration = 2)
-    time.sleep(1)
-    pg.click()
+def screen1():
     
-    # Scroll down
-    pg.moveTo(2810, 720, duration = 2)
-    for i in range (40):
-        pg.scroll(-1)
+    def clearerror1():
+        # Clear the error message
+        pg.click(950, 660, duration = 1)
+        time.sleep(6)
 
-    # Click on Work 
-    for i in range (count):
-        pg.click(2810, 750, duration = 2)
+    def discard1():
+        #Click on MTM taskbar || MTM must be at index 11
+        pg.click(620, 1050, duration = 2)
+
+        #Click on Cancel
+        pg.click(565, 560, duration = 2)
+
+    def relogin1():
+
+        # Click on connect wallet
+        pg.click(950, 740, duration = 2)
+
+        # Click on Metamask
+        # pg.click(2870, 580, duration = 2)
+
+        #Click on MTM taskbar || MTM must be at index 8
+        # pg.click(2385, 1050, duration = 2)
+
+        # Click on Sign
+        pg.moveTo(1830, 560, duration = 3)
+        pg.click()
+
+        # Click on Blank
+        pg.click(980, 300, duration = 2)
+        time.sleep(10)
+
+        # Click on Teasure Hunt 
+        pg.click(980, 460, duration = 2)
+        time.sleep(10)
+
+    def awake1():
+        # Back to menu
+        pg.click(530, 280, duration = 2)
+        # Click on Hero
+        pg.moveTo(1380, 765, duration = 2)
         time.sleep(1)
-        # Click on close | In case of error
-        pg.click(3160, 355, duration = 2)
-
-    # Click on close
-    pg.click(2950, 355, duration = 2)
-    # Click on Teasure Hunt 
-    pg.click(2900, 460, duration = 2)
-
-    # Click on new map | In case of new map
-    pg.click(2870, 740, duration = 2)
+        pg.click()
     
+        # Scroll down
+        time.sleep(10)    
+        pg.moveTo(890, 720, duration = 2)
+        for i in range (40):
+            pg.scroll(-1)
+
+        # Click on Work 
+        for i in range (15):
+            pg.click(890, 750, duration = 2)
+            time.sleep(1)
+            # Click on close | In case of error
+            pg.click(1240, 355, duration = 2)
+
+        # Click on close
+        pg.click(1030, 355, duration = 2)
+        # Click on Teasure Hunt 
+        pg.click(980, 460, duration = 2)
+
+        # Click on new map | In case of new map
+        pg.click(950, 740, duration = 2)
+    clearerror1()
+    discard1()
+    relogin1()
+    awake1()
+
+def screen2():
+    
+    def clearerror2():
+        # Clear the error message
+        pg.click(2870, 660, duration = 1)
+        time.sleep(6)
+
+    def discard2():
+        #Click on MTM taskbar || MTM must be at index 11
+        pg.click(2540, 1050, duration = 2)
+
+        #Click on Cancel
+        pg.click(3585, 560, duration = 2)
+
+    def relogin2():
+
+        # Click on connect wallet
+        pg.click(2870, 740, duration = 2)
+
+        # Click on Metamask
+        # pg.click(2870, 580, duration = 2)
+
+        #Click on MTM taskbar || MTM must be at index 8
+        # pg.click(2385, 1050, duration = 2)
+
+        # Click on Sign
+        pg.moveTo(3750, 560, duration = 3)
+        pg.click()
+
+        # Click on Blank
+        pg.click(2900, 300, duration = 2)
+        time.sleep(10)
+
+        # Click on Teasure Hunt 
+        pg.click(2900, 460, duration = 2)
+        time.sleep(10)
+
+    def awake2():
+        # Back to menu
+        pg.click(2450, 280, duration = 2)
+        # Click on Hero
+        pg.moveTo(3300, 765, duration = 2)
+        time.sleep(1)
+        pg.click()
+    
+        # Scroll down
+        time.sleep(10)    
+        pg.moveTo(2810, 720, duration = 2)
+        for i in range (40):
+            pg.scroll(-1)
+
+        # Click on Work 
+        for i in range (15):
+            pg.click(2810, 750, duration = 2)
+            time.sleep(1)
+            # Click on close | In case of error
+            pg.click(3160, 355, duration = 2)
+
+        # Click on close
+        pg.click(2950, 355, duration = 2)
+        # Click on Teasure Hunt 
+        pg.click(2900, 460, duration = 2)
+
+        # Click on new map | In case of new map
+        pg.click(2870, 740, duration = 2)
+    clearerror2()
+    discard2()
+    relogin2()
+    awake2()
+
+
+cycletime = int(input("Awake hero in every (min) "))*60
+loop = 1
+print("Please place your cursor at screen 1 and minimize this app")
+time.sleep(1)
+print("5")
+time.sleep(1)
+print("4")
+time.sleep(1)
+print("3")
+time.sleep(1)
+print("2")
+time.sleep(1)
+print("1")
+time.sleep(1)
+print("Start")
+
+while(True):
+    screen1()
+    screen2()
+    pg.moveTo(950, 660, duration = 1)
+
     #  Print count and time
     ct = datetime.datetime.now()
     print("\nAwake : "+str(loop)+" times\nTimestamp :",ct,"\n")
-    
-    # Sleep timer
-    time.sleep(duration)
-
-count = int(input("How many hero in your team? "))
-duration = int(input("Awake hero in every (min) "))*60
-loop = 1
-while(True):
-    prepare()
-    autoclick(loop)
     loop += 1
+    # Sleep timer
+    time.sleep(cycletime)
+
